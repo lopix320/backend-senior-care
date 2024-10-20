@@ -16,12 +16,12 @@ app.use(cors(corsOptions));
 app.use(express.json());
 routes(app);
 
-AppDataSource.initialize()
-  .then(() => {
-    console.log("Data Source has been initialized!");
-  })
-  .catch((err) => {
-    console.error("Erro ao acessar banco:", err);
-  });
+// AppDataSource.initialize()
+//   .then(() => {
+//     console.log("Data Source has been initialized!");
+//   })
+//   .catch((err) => {
+//     console.error("Erro ao acessar banco:", err);
+//   });
 
 app.listen(process.env.PORT || 4445);
