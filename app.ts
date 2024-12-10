@@ -24,4 +24,4 @@ AppDataSource.initialize()
     console.error("Erro ao acessar banco:", err);
   });
 
-app.listen(4445);
+app.listen(8080);
