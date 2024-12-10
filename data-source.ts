@@ -1,6 +1,13 @@
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
 import Usuario from "./entities/Usuario";
+import Endereco from "./entities/Endereco";
+import Cuidador from "./entities/Cuidador";
+import Paciente from "./entities/Paciente";
+import PacienteServico from "./entities/PacienteServico";
+import Servico from "./entities/Servico";
+import { Contratacao } from "./entities/Contratacao";
+const { Pool } = require("pg");
 
 // import State "./entities/State";
 
@@ -15,9 +22,17 @@ const AppDataSource = new DataSource({
   database: process.env.DB_NAME || "test",
   entities: [
     Usuario,
-
+    Endereco,
+    Cuidador,
+    Paciente,
+    Servico,
+    PacienteServico,
+    Contratacao,
     // State
   ],
+  ssl: {
+    rejectUnauthorized: false,
+  },
   extra: {
     trustServerCertificate: true,
   },
