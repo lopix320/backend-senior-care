@@ -15,11 +15,11 @@ dotenv.config();
 
 const AppDataSource = new DataSource({
   type: "postgres",
-  host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT || "3306"),
-  username: process.env.DB_USER || "test",
-  password: process.env.DB_PSW || "test",
-  database: process.env.DB_NAME || "test",
+  host: "seniorcaredb123.postgres.database.azure.com",
+  port: parseInt("5432"),
+  username: "gabriel320",
+  password: "lopes0502@L",
+  database: "postgres",
   entities: [
     Usuario,
     Endereco,
